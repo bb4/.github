@@ -1,6 +1,6 @@
 # bb4
 
-Decades of Scala/Java simulations, puzzles, and games — see [barrybecker4.org](https://barrybecker4.org).
+Decades of Scala simulations, puzzles, and games — see [barrybecker4.org](https://barrybecker4.org).
 
 ## Build status
 
