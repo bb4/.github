@@ -7,6 +7,7 @@ Decades of Scala simulations, puzzles, and games — see [barrybecker4.org](http
 | Repo | Status |
 |---|---|
 | bb4-gradle | ![bb4-gradle](https://github.com/bb4/bb4-gradle/actions/workflows/ci.yml/badge.svg) |
+| bb4-project-template | ![bb4-gradle](https://github.com/bb4/bb4-project-template/actions/workflows/ci.yml/badge.svg) |
 | bb4-common | ![bb4-common](https://github.com/bb4/bb4-common/actions/workflows/ci.yml/badge.svg) |
 | bb4-math | ![bb4-math](https://github.com/bb4/bb4-math/actions/workflows/ci.yml/badge.svg) |
 | bb4-ui | ![bb4-ui](https://github.com/bb4/bb4-ui/actions/workflows/ci.yml/badge.svg) |
