@@ -4,5 +4,38 @@
     "bb4-shortest-paths",
     "bb4-sound",
     "bb4-ui"
+  ],
+  "bb4-math": [
+    "bb4-shortest-paths",
+    "bb4-ui"
+  ],
+  "bb4-A-star": [
+    "bb4-games",
+    "bb4-puzzles"
+  ],
+  "bb4-expression": [
+    "bb4-simulations"
+  ],
+  "bb4-optimization": [
+    "bb4-discrete-optimization",
+    "bb4-games",
+    "bb4-imageproc",
+    "bb4-puzzles",
+    "bb4-simulations"
+  ],
+  "bb4-shortest-paths": [
+    "bb4-discrete-optimization"
+  ],
+  "bb4-sound": [
+    "bb4-adventure",
+    "bb4-experimentation",
+    "bb4-games",
+    "bb4-puzzles",
+    "bb4-simulations"
+  ],
+  "bb4-ui": [
+    "bb4-adventure",
+    "bb4-experimentation",
+    "bb4-optimization"
   ]
 }

@@ -30,6 +30,7 @@ jobs:
       notify-downstream: true   # libraries that fan out rebuilds
       # use-xvfb: true          # e.g. bb4-simulations
       # extra-gradle-args: -Djava.awt.headless=true
+      # publish-gradle-args: --max-workers=1 --no-parallel   # multi-artifact Central rate limits
     secrets:
       OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
       OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
@@ -65,3 +66,5 @@ Inputs default to a quiet `./gradlew build` (no `--info`). On `repository_dispat
 | bb4-puzzles | ![bb4-puzzles](https://github.com/bb4/bb4-puzzles/actions/workflows/ci.yml/badge.svg) |
 | bb4-simulations | ![bb4-simulations](https://github.com/bb4/bb4-simulations/actions/workflows/ci.yml/badge.svg) |
 | bb4-games | ![bb4-games](https://github.com/bb4/bb4-games/actions/workflows/ci.yml/badge.svg) |
+| bb4-color-mixer | ![bb4-color-mixer](https://github.com/bb4/bb4-color-mixer/actions/workflows/ci.yml/badge.svg) |
+| bb4-traffic-simulation | ![bb4-traffic-simulation](https://github.com/bb4/bb4-traffic-simulation/actions/workflows/ci.yml/badge.svg) |

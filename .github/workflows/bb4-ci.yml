@@ -27,6 +27,10 @@ on:
         description: Extra Gradle JVM/system args (e.g. -Djava.awt.headless=true)
         type: string
         default: ""
+      publish-gradle-args:
+        description: Extra args for ./gradlew publish (e.g. rate-limit flags for multi-artifact apps)
+        type: string
+        default: ""
       refresh-on-dispatch:
         description: On repository_dispatch, run clean + --refresh-dependencies
         type: boolean
@@ -88,7 +92,17 @@ jobs:
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-        run: ./gradlew publish
+        run: |
+          set -euo pipefail
+          PUBLISH_CMD=(./gradlew publish)
+          EXTRA="${{ inputs.publish-gradle-args }}"
+          if [ -n "$EXTRA" ]; then
+            # Intentionally unquoted so callers can pass multiple tokens.
+            EXTRA_ARR=($EXTRA)
+            PUBLISH_CMD+=("${EXTRA_ARR[@]}")
+          fi
+          echo "Running: ${PUBLISH_CMD[*]}"
+          "${PUBLISH_CMD[@]}"
 
       - name: Notify downstream repos
         if: >-
