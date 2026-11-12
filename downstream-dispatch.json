@@ -1,0 +1,8 @@
+{
+  "bb4-common": [
+    "bb4-aikido-app",
+    "bb4-shortest-paths",
+    "bb4-sound",
+    "bb4-ui"
+  ]
+}
