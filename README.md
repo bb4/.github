@@ -2,6 +2,46 @@
 
 Decades of Scala simulations, puzzles, and games — see [barrybecker4.org](https://barrybecker4.org).
 
+## Reusable workflows
+
+| Workflow | Purpose |
+|---|---|
+| [`bb4-ci.yml`](.github/workflows/bb4-ci.yml) | Shared Gradle CI (Temurin 25, Gradle User Home cache, optional publish / downstream dispatch) |
+| [`jpackage-release.yml`](.github/workflows/jpackage-release.yml) | Multi-OS native installers via `jpackageAllApps` |
+
+### `bb4-ci` caller example
+
+```yaml
+name: CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+  repository_dispatch:
+    types: [ upstream-updated ]
+
+jobs:
+  build:
+    uses: bb4/.github/.github/workflows/bb4-ci.yml@main
+    with:
+      gradle-args: build
+      publish: true
+      notify-downstream: true   # libraries that fan out rebuilds
+      # use-xvfb: true          # e.g. bb4-simulations
+      # extra-gradle-args: -Djava.awt.headless=true
+    secrets:
+      OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+      OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+      BB4_DISPATCH_TOKEN: ${{ secrets.BB4_DISPATCH_TOKEN }}
+```
+
+Inputs default to a quiet `./gradlew build` (no `--info`). On `repository_dispatch`, the workflow runs `clean … --refresh-dependencies` unless `refresh-on-dispatch: false`.
+
+### Downstream dispatch map
+
+[`downstream-dispatch.json`](downstream-dispatch.json) maps a producer repo name to the repos that should receive `upstream-updated` when that producer publishes from `main`/`master`. Edit that file instead of hardcoding lists in each CI workflow.
+
 ## Build status
 
 | Repo | Status |
@@ -25,4 +65,3 @@ Decades of Scala simulations, puzzles, and games — see [barrybecker4.org](http
 | bb4-puzzles | ![bb4-puzzles](https://github.com/bb4/bb4-puzzles/actions/workflows/ci.yml/badge.svg) |
 | bb4-simulations | ![bb4-simulations](https://github.com/bb4/bb4-simulations/actions/workflows/ci.yml/badge.svg) |
 | bb4-games | ![bb4-games](https://github.com/bb4/bb4-games/actions/workflows/ci.yml/badge.svg) |
-
