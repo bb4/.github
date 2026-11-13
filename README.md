@@ -56,6 +56,7 @@ Inputs default to a quiet `./gradlew build` (no `--info`). On `repository_dispat
 | bb4-A-star | ![bb4-A-star](https://github.com/bb4/bb4-A-star/actions/workflows/ci.yml/badge.svg) |
 | bb4-optimization | ![bb4-optimization](https://github.com/bb4/bb4-optimization/actions/workflows/ci.yml/badge.svg) |
 | bb4-expression | ![bb4-expression](https://github.com/bb4/bb4-expression/actions/workflows/ci.yml/badge.svg) |
+| bb4-xml | ![bb4-xml](https://github.com/bb4/bb4-xml/actions/workflows/ci.yml/badge.svg) |
 | bb4-shortest-paths | ![bb4-shortest-paths](https://github.com/bb4/bb4-shortest-paths/actions/workflows/ci.yml/badge.svg) |
 | bb4-imageproc | ![bb4-imageproc](https://github.com/bb4/bb4-imageproc/actions/workflows/ci.yml/badge.svg) |
 | bb4-adventure | ![bb4-adventure](https://github.com/bb4/bb4-adventure/actions/workflows/ci.yml/badge.svg) |

@@ -16,6 +16,13 @@
   "bb4-expression": [
     "bb4-simulations"
   ],
+  "bb4-xml": [
+    "bb4-adventure",
+    "bb4-aikido-app",
+    "bb4-games",
+    "bb4-simulations",
+    "bb4-ui"
+  ],
   "bb4-optimization": [
     "bb4-discrete-optimization",
     "bb4-games",
