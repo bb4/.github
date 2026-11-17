@@ -1,4 +1,28 @@
 {
+  "bb4-gradle": [
+    "bb4-A-star",
+    "bb4-Q-learning",
+    "bb4-adventure",
+    "bb4-aikido-app",
+    "bb4-color-mixer",
+    "bb4-common",
+    "bb4-discrete-optimization",
+    "bb4-experimentation",
+    "bb4-expression",
+    "bb4-games",
+    "bb4-image-breeder",
+    "bb4-imageproc",
+    "bb4-math",
+    "bb4-optimization",
+    "bb4-project-template",
+    "bb4-puzzles",
+    "bb4-shortest-paths",
+    "bb4-simulations",
+    "bb4-sound",
+    "bb4-traffic-simulation",
+    "bb4-ui",
+    "bb4-xml"
+  ],
   "bb4-common": [
     "bb4-aikido-app",
     "bb4-shortest-paths",
